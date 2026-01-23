@@ -14,6 +14,24 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+header h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: transform  0.4s ease;
+}
+header h1 {
+  font-size: 48px;
+  background: linear-gradient(90deg, #6f02b8 50%, #ffffff 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s ease;
+}
+
+header h1:hover {
+  background-position: left bottom;
+}
+
 
 header nav a {
     color: white;
@@ -26,6 +44,7 @@ header nav a {
     background: #f4f4f4;
     text-align: center;
     padding: 60px 20px;
+    line-height: 35px;
 }
 
 .banner button {
@@ -34,8 +53,13 @@ header nav a {
     color: white;
     border: none;
     cursor: pointer;
+     transition: transform 0.3s ease;
 }
-
+.banner button:hover {
+background-color: rgb(91, 0, 133);
+color: rgb(255, 255, 255);
+transform: scale(1.1);
+}
 /* Products */
 .products {
     padding: 40px;
@@ -53,10 +77,16 @@ header nav a {
     border: 1px solid #ddd;
     padding: 20px;
     width: 220px;
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.1) translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0,5);
 }
 
 .product-card img {
     width: 100%;
+    object-fit: cover;
 }
 
 .product-card button {
